@@ -1,6 +1,5 @@
 # Pelican plugin for using the Markdown-Include extension
 
-
 ## Description
 
 This plugin allows the use of the
@@ -8,17 +7,26 @@ This plugin allows the use of the
 in Pelican articles.
 
 
-## Usage
-
-### Prerequisites
+## Installation
 
 The Markdown-Include module must be installed in the system, otherwise this
 plugin will be deactivated.  The module can be installed with pip:
 
     pip install markdown-include
 
+You might install this plugin directly from Github along with your website
+sources.  At the top-level directory, do, for instance:
 
-### Syntax
+    mkdir plugins-extra
+    git clone https://github.com/rlaboiss/pelican_md_include.git plugins-extra/md_include
+
+In `pelicanconf.py`, add `'plugins-extra'` to `PLUGIN_PATHS` and
+`md_include'` to `PLUGINS` (see the Pelican
+[documentation](http://docs.getpelican.com/en/3.5.0/plugins.html#how-to-use-plugins)
+for details about configuring your plugins).
+
+
+## Usage
 
 The syntax for use within Pelican articles is `{!filename!}`. According to
 the documentation of the Markdown-Include extension, this statement will be
@@ -27,7 +35,7 @@ replacement is done prior to any other Markdown processing, so any Markdown
 syntax that is wanted can be used within the included files.
 
 
-### User settings
+## Configuration
 
 The following variables control the behavior of the plugin and can be set
 in the Pelican settings file:
