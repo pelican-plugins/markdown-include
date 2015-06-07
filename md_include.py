@@ -28,7 +28,7 @@ except ImportError:
 
 
 def initialize (pelicanobj):
-    """Initialize the Libravatar plugin"""
+    """Initialize the Markdown-Include plugin"""
     pelicanobj.settings.setdefault ('MD_INCLUDE_BASE_PATH', None)
     pelicanobj.settings.setdefault ('MD_INCLUDE_ENCODING', None)
 
@@ -46,7 +46,7 @@ def initialize (pelicanobj):
 
 
 def register ():
-    """Register the Graphviz plugin with Pelican"""
+    """Register the Markdown-Include plugin with Pelican"""
     if MarkdownInclude:
         signals.initialized.connect (initialize)
     else:

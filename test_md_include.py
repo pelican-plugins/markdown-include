@@ -32,7 +32,7 @@ INCLUDE_FILENAME = 'include'
 INCLUDED_CONTENT = 'naïve'
 
 class TestMarkdownInclude (unittest.TestCase):
-    """Class for testing the URL output of the Libravatar plugin"""
+    """Class for testing the URL output of the Markdown-Include plugin"""
 
     def setUp (self, encoding = None, base_path = None):
 
