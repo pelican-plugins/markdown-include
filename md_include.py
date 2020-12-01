@@ -42,7 +42,10 @@ def initialize (pelicanobj):
     if encoding:
         config ['encoding'] = encoding
 
-    pelicanobj.settings ['MD_EXTENSIONS'].append (MarkdownInclude (config))
+    if isinstance (pelicanobj.settings.get ('MD_EXTENSIONS'), list): # pelican 3.6.3 and earlier
+        pelicanobj.settings ['MD_EXTENSIONS'].append (MarkdownInclude (config))
+    else:
+        pelicanobj.settings ['MARKDOWN'].setdefault ('extensions', []).append (MarkdownInclude (config))
 
 
 def register ():
