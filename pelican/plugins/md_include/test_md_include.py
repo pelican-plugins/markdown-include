@@ -68,12 +68,12 @@ Date: 1970-01-01
 
         ## Create the included file
         if encoding:
-            encoded_content = INCLUDED_CONTENT.decode ('utf-8').encode (encoding)
+            encoded_content = INCLUDED_CONTENT.encode (encoding)
+            fid = open (os.path.join (include_dir, INCLUDE_FILENAME), 'wb')
         else:
             encoded_content = INCLUDED_CONTENT
-        fid = open (os.path.join (include_dir, INCLUDE_FILENAME), 'w')
+            fid = open (os.path.join (include_dir, INCLUDE_FILENAME), 'w')
         fid.write (encoded_content)
-        fid.write ('\n')
         fid.close ()
 
         ## Run the Pelican instance
