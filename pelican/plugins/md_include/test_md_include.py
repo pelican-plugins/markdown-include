@@ -60,7 +60,7 @@ class TestMarkdownInclude (unittest.TestCase):
         fid = open (os.path.join (self.content_path, '%s.md' % TEST_FILE_STEM),
                     'w')
         fid.write ('''Title: Test
-Date:
+Date: 1970-01-01
 
 {!%s!}
 ''' % INCLUDE_FILENAME)
