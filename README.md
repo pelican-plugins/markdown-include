@@ -52,7 +52,7 @@ To start contributing to this plugin, review the [Contributing to Pelican][] doc
 Author
 ------
 
-Copyright (C) 2015, 2021  Rafael Laboissière (<rafael@laboissiere.net>)
+Copyright © 2015, 2021 Rafael Laboissière (<rafael@laboissiere.net>)
 
 License
 -------
