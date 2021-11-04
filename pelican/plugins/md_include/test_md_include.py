@@ -59,14 +59,17 @@ class TestMarkdownInclude(unittest.TestCase):
             settings["MD_INCLUDE_ENCODING"] = encoding
 
         # Create the article file
-        fid = open(os.path.join(self.content_path, "%s.md" % TEST_FILE_STEM), "w")
+        fid = open(
+            os.path.join(self.content_path, "{}.md".format(TEST_FILE_STEM)), "w",
+        )
         fid.write(
             """Title: Test
 Date: 1970-01-01
 
-{!%s!}
-"""
-            % INCLUDE_FILENAME
+{{!{}!}}
+""".format(
+                INCLUDE_FILENAME
+            )
         )
         fid.close()
 
@@ -91,7 +94,9 @@ Date: 1970-01-01
 
     def test_inclusion(self):
         """Test for default values"""
-        fid = open(os.path.join(self.output_path, "%s.html" % TEST_FILE_STEM), "r")
+        fid = open(
+            os.path.join(self.output_path, "{}.html".format(TEST_FILE_STEM)), "r",
+        )
         found = False
         for line in fid.readlines():
             if re.search(INCLUDED_CONTENT, line):
