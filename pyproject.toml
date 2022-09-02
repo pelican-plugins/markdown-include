@@ -28,24 +28,24 @@ classifiers = [
 "Issue Tracker" = "https://github.com/pelican-plugins/md-include/issues"
 
 [tool.poetry.dependencies]
-python = "^3.6"
-pelican = "^4.5"
+python = ">=3.6.2,<4.0"
+pelican = ">=4.5"
 markdown = {version = "^3.2.2", optional = true}
 
 [tool.poetry.dev-dependencies]
-black = "^22.8.0"
-flake8 = "^3.9.0"
-flake8-black = "^0.2.1"
-invoke = "^1.5.0"
-isort = "^5.7.0"
-livereload = "^2.6.3"
-markdown = "^3.3.4"
+black = {version = "^22.1.0"}
+flake8 = "^3.9"
+flake8-black = "^0.2"
+invoke = "^1.3"
+isort = "^5.4"
+livereload = "^2.6"
+markdown = "^3.2"
 markdown-include = "^0.7.0"
-pytest = "^7.1.3"
-pytest-cov = "^2.11.1"
+pytest = "^6.0"
+pytest-cov = "^3.0"
 pytest-pythonpath = "^0.7.3"
 pytest-sugar = "^0.9.4"
-Werkzeug = "^1.0.1"
+Werkzeug = "^1.0"
 
 [tool.poetry.extras]
 markdown = ["markdown"]
