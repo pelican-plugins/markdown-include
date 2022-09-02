@@ -60,16 +60,15 @@ class TestMarkdownInclude(unittest.TestCase):
 
         # Create the article file
         fid = open(
-            os.path.join(self.content_path, "{}.md".format(TEST_FILE_STEM)), "w",
+            os.path.join(self.content_path, f"{TEST_FILE_STEM}.md"),
+            "w",
         )
         fid.write(
-            """Title: Test
+            f"""Title: Test
 Date: 1970-01-01
 
-{{!{}!}}
-""".format(
-                INCLUDE_FILENAME
-            )
+{{!{INCLUDE_FILENAME}!}}
+"""
         )
         fid.close()
 
@@ -95,7 +94,8 @@ Date: 1970-01-01
     def test_inclusion(self):
         """Test for default values"""
         fid = open(
-            os.path.join(self.output_path, "{}.html".format(TEST_FILE_STEM)), "r",
+            os.path.join(self.output_path, f"{TEST_FILE_STEM}.html"),
+            "r",
         )
         found = False
         for line in fid.readlines():
