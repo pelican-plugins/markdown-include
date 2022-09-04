@@ -19,7 +19,9 @@ This plugin can be installed via:
 Usage
 -----
 
-The syntax for use within Pelican articles is `{!filename!}`. According to the documentation of the Markdown-Include extension, this statement will be replaced by the contents of `filename` and will work recursively. The replacement is done prior to any other Markdown processing, so any Markdown syntax that is wanted can be used within the included files.
+The syntax for use within Pelican articles is `{!filename!}`. According to the documentation of the Markdown-Include extension, this statement will be replaced by the contents of `filename` and will work recursively. The replacement is done prior to any other Markdown processing, so any Markdown syntax that is wanted can be used within the included files. For more details, see the [documentation][] of the markdown-include module of Python.
+
+[documentation]: https://github.com/cmacmackin/markdown-include/#readme
 
 
 Configuration
