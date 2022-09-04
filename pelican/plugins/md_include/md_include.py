@@ -30,17 +30,27 @@ except ImportError:
 def initialize(pelicanobj):
     """Initialize the Markdown-Include plugin"""
     pelicanobj.settings.setdefault("MD_INCLUDE_BASE_PATH", None)
-    pelicanobj.settings.setdefault("MD_INCLUDE_ENCODING", None)
+    pelicanobj.settings.setdefault("MD_INCLUDE_ENCODING", "utf-8")
+    pelicanobj.settings.setdefault("MD_INCLUDE_INHERIT_HEADING_DEPTH", False)
+    pelicanobj.settings.setdefault("MD_INCLUDE_HEADING_OFFSET", 0)
 
     config = {}
 
     base_path = pelicanobj.settings.get("MD_INCLUDE_BASE_PATH")
-    if base_path:
+    if base_path is not None:
         config["base_path"] = base_path
 
     encoding = pelicanobj.settings.get("MD_INCLUDE_ENCODING")
-    if encoding:
+    if encoding is not None:
         config["encoding"] = encoding
+
+    inherit_heading_depth = pelicanobj.settings.get("MD_INCLUDE_INHERIT_HEADING_DEPTH")
+    if inherit_heading_depth is not None:
+        config["inheritHeadingDepth"] = inherit_heading_depth
+
+    heading_offset = pelicanobj.settings.get("MD_INCLUDE_HEADING_OFFSET")
+    if heading_offset is not None:
+        config["headingOffset"] = heading_offset
 
     if isinstance(
         pelicanobj.settings.get("MD_EXTENSIONS"), list

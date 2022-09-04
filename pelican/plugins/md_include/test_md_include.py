@@ -36,7 +36,13 @@ INCLUDED_CONTENT = "naïve"
 class TestMarkdownInclude(unittest.TestCase):
     """Class for testing the URL output of the Markdown-Include plugin"""
 
-    def setUp(self, encoding=None, base_path=None):
+    def setUp(
+        self,
+        encoding=None,
+        base_path=None,
+        inherit_heading_depth=None,
+        heading_offset=None,
+    ):
 
         self.output_path = mkdtemp(prefix=TEST_DIR_PREFIX)
         self.content_path = mkdtemp(prefix=TEST_DIR_PREFIX)
@@ -57,6 +63,12 @@ class TestMarkdownInclude(unittest.TestCase):
 
         if encoding:
             settings["MD_INCLUDE_ENCODING"] = encoding
+
+        if inherit_heading_depth:
+            settings["MD_INCLUDE_INHERIT_HEADING_DEPTH"] = inherit_heading_depth
+
+        if heading_offset:
+            settings["MD_INCLUDE_HEADING_OFFSET"] = heading_offset
 
         # Create the article file
         fid = open(
@@ -126,4 +138,28 @@ class TestMarkdownIncludeBasePath(TestMarkdownInclude):
 
     def test_inclusion(self):
         """Test for MD_INCLUDE_BASE_PATH setting"""
+        TestMarkdownInclude.test_inclusion(self)
+
+
+class TestMarkdownInheritHeadingDepth(TestMarkdownInclude):
+    """Class for exercising configuration variable MD_INCLUDE_INHERIT_HEADING_DEPTH"""
+
+    def setUp(self, override=None):
+        """Initialize the configurations"""
+        TestMarkdownInclude.setUp(self, inherit_heading_depth=True)
+
+    def test_inclusion(self):
+        """Test for MD_INCLUDE_INHERIT_HEADING_DEPTH setting"""
+        TestMarkdownInclude.test_inclusion(self)
+
+
+class TestMarkdownHeadingOffset(TestMarkdownInclude):
+    """Class for exercising configuration variable MD_INCLUDE_HEADING_OFFSET"""
+
+    def setUp(self, override=None):
+        """Initialize the configurations"""
+        TestMarkdownInclude.setUp(self, heading_offset=1)
+
+    def test_inclusion(self):
+        """Test for MD_INCLUDE_HEADING_OFFSET setting"""
         TestMarkdownInclude.test_inclusion(self)

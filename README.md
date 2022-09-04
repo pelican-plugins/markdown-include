@@ -33,11 +33,15 @@ The following variables control the behavior of the plugin and can be set in the
 
 - `MD_INCLUDE_ENCODING`: The encoding of the included files (defaults to `'utf-8'`).
 
+- `MD_INCLUDE_INHERIT_HEADING_DEPTH`: If True, increases headings on include file by amount of previous heading. Combines with `MD_HEADING_OFFSET` option, below (defaults to False.)
+
+- `MD_HEADING_OFFSET`: Increases heading depth by a specific ammount, in addition to the `MD_INCLUDE_INHERIT_HEADING_DEPTH` option (defaults to 0).
+
 
 Alternative to this plugin
 --------------------------
 
-Pelican allows the use of extra Markdown extensions by declaring them in the `MD_EXTENSIONS` configuration variable.  However, as [explained][] in the Pelican documentation, adding new extensions via MD_EXTENSIONS is awkward, because all the extensions loaded by default must also be listed.  Besides avoiding this problem, this plugin provides a "pelicanish" way of setting the configuration values of the Markdown-Include extension (`base_path` and `encoding`).  Furthermore, Markdown-Include extension must be installed in a place where Pelican can find it, what may be tricky.
+Pelican allows the use of extra Markdown extensions by declaring them in the `MD_EXTENSIONS` configuration variable.  However, as [explained][] in the Pelican documentation, adding new extensions via MD_EXTENSIONS is awkward, because all the extensions loaded by default must also be listed.  Besides avoiding this problem, this plugin provides a "pelicanish" way of setting the configuration values of the Markdown-Include extension (`base_path`, `encoding`, `inherit_heading_depth`, and `heading_offset`).  Furthermore, Markdown-Include extension must be installed in a place where Pelican can find it, what may be tricky.
 
 [explained]: http://docs.getpelican.com/en/latest/settings.html
 
