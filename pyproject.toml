@@ -28,32 +28,29 @@ classifiers = [
 "Issue Tracker" = "https://github.com/pelican-plugins/markdown-include/issues"
 
 [tool.poetry.dependencies]
-python = ">=3.6.2,<4.0"
+python = ">=3.8.1,<4.0"
 pelican = ">=4.5"
-markdown = {version = "^3.2.2", optional = true}
+markdown = ">=3.2"
+markdown-include = ">=0.7"
 
-[tool.poetry.dev-dependencies]
-black = {version = "^22.1.0"}
+[tool.poetry.group.dev.dependencies]
+black = {version = "^23"}
 flake8 = "^3.9"
-flake8-black = "^0.2"
-invoke = "^1.3"
-isort = "^5.4"
-livereload = "^2.6"
-markdown = "^3.2"
-markdown-include = "^0.7.0"
-pytest = "^6.0"
-pytest-cov = "^3.0"
-pytest-pythonpath = "^0.7.3"
-pytest-sugar = "^0.9.4"
-Werkzeug = "^1.0"
+flake8-black = "^0.3"
+invoke = "^2.1"
+isort = "^5.11.5"
+markdown = "^3.4"
+pytest = "^7.0"
+pytest-cov = "^4.0"
+pytest-sugar = "^0.9.7"
 
 [tool.poetry.extras]
 markdown = ["markdown"]
 
 [tool.autopub]
-project-name = "Use Markdown-Include extension"
+project-name = "Markdown Include"
 git-username = "botpub"
-git-email = "botpub@autopub.rocks"
+git-email = "52496925+botpub@users.noreply.github.com"
 append-github-contributor = true
 
 [tool.isort]
