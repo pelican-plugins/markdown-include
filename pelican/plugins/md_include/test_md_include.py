@@ -43,7 +43,6 @@ class TestMarkdownInclude(unittest.TestCase):
         inherit_heading_depth=None,
         heading_offset=None,
     ):
-
         self.output_path = mkdtemp(prefix=TEST_DIR_PREFIX)
         self.content_path = mkdtemp(prefix=TEST_DIR_PREFIX)
 
