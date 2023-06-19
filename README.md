@@ -55,6 +55,13 @@ To start contributing to this plugin, review the [Contributing to Pelican][] doc
 [existing issues]: https://github.com/pelican-plugins/markdown-include/issues
 [Contributing to Pelican]: https://docs.getpelican.com/en/latest/contribute.html
 
+Acknowledgments
+---------------
+
+Thanks to [Justin Mayer][] for helping with migration of this plugin under the Pelican Plugins organization.
+
+[Justin Mayer]: https://github.com/justinmayer
+
 Author
 ------
 
