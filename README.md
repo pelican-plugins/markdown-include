@@ -1,9 +1,9 @@
 Use Markdown-Include extension: A Plugin for Pelican
 ====================================================
 
-[![Build Status](https://img.shields.io/github/workflow/status/pelican-plugins/md-include/build)](https://github.com/pelican-plugins/md-include/actions)
-[![PyPI Version](https://img.shields.io/pypi/v/pelican-md-include)](https://pypi.org/project/pelican-md-include/)
-![License](https://img.shields.io/pypi/l/pelican-md-include?color=blue)
+[![Build Status](https://img.shields.io/github/workflow/status/pelican-plugins/markdown-include/build)](https://github.com/pelican-plugins/markdown-include/actions)
+[![PyPI Version](https://img.shields.io/pypi/v/pelican-markdown-include)](https://pypi.org/project/pelican-markdown-include/)
+![License](https://img.shields.io/pypi/l/pelican-markdown-include?color=blue)
 
 This plugin allows the use of the [Markdown-Include extension][] in Pelican articles.
 
@@ -14,7 +14,7 @@ Installation
 
 This plugin can be installed via:
 
-    python -m pip install pelican-md-include
+    python -m pip install pelican-markdown-include
 
 Usage
 -----
@@ -52,7 +52,7 @@ Contributions are welcome and much appreciated. Every little bit helps. You can 
 
 To start contributing to this plugin, review the [Contributing to Pelican][] documentation, beginning with the **Contributing Code** section.
 
-[existing issues]: https://github.com/pelican-plugins/md-include/issues
+[existing issues]: https://github.com/pelican-plugins/markdown-include/issues
 [Contributing to Pelican]: https://docs.getpelican.com/en/latest/contribute.html
 
 Author

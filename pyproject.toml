@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "pelican-md-include"
+name = "pelican-markdown-include"
 version = "0.0.0"
 description = "Pelican plugin for using Markdown-Include extension"
 authors = ["Rafael Laboissière <rafael@laboissiere.net>"]
 license = "AGPL-3.0"
 readme = "README.md"
 keywords = ["pelican", "plugin"]
-repository = "https://github.com/pelican-plugins/md-include"
+repository = "https://github.com/pelican-plugins/markdown-include"
 documentation = "https://docs.getpelican.com"
 packages = [
     { include = "pelican" },
@@ -25,7 +25,7 @@ classifiers = [
 
 [tool.poetry.urls]
 "Funding" = "https://donate.getpelican.com/"
-"Issue Tracker" = "https://github.com/pelican-plugins/md-include/issues"
+"Issue Tracker" = "https://github.com/pelican-plugins/markdown-include/issues"
 
 [tool.poetry.dependencies]
 python = ">=3.6.2,<4.0"
