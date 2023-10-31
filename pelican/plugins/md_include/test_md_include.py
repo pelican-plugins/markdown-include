@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Unit testing suite for the Markdown-Include Plugin"""
+"""Unit testing suite for the Markdown-Include Plugin."""
 
 # Copyright (C) 2015, 2021, 2022  Rafael Laboissière <rafael@laboissiere.net>
 #
@@ -34,7 +34,7 @@ INCLUDED_CONTENT = "naïve"
 
 
 class TestMarkdownInclude(unittest.TestCase):
-    """Class for testing the URL output of the Markdown-Include plugin"""
+    """Class for testing the URL output of the Markdown-Include plugin."""
 
     def setUp(
         self,
@@ -103,7 +103,7 @@ Date: 1970-01-01
         rmtree(self.content_path)
 
     def test_inclusion(self):
-        """Test for default values"""
+        """Test for default values."""
         fid = open(os.path.join(self.output_path, f"{TEST_FILE_STEM}.html"))
         found = False
         for line in fid.readlines():
@@ -114,48 +114,48 @@ Date: 1970-01-01
 
 
 class TestMarkdownIncludeEncoding(TestMarkdownInclude):
-    """Class for exercising the configuration variable MD_INCLUDE_ENCODING"""
+    """Class for exercising the configuration variable MD_INCLUDE_ENCODING."""
 
     def setUp(self, override=None):
-        """Initialize the configurations"""
+        """Initialize the configurations."""
         TestMarkdownInclude.setUp(self, encoding="iso-8859-1")
 
     def test_inclusion(self):
-        """Test for MD_INCLUDE_ENCODING setting"""
+        """Test for MD_INCLUDE_ENCODING setting."""
         TestMarkdownInclude.test_inclusion(self)
 
 
 class TestMarkdownIncludeBasePath(TestMarkdownInclude):
-    """Class for exercising configuration variable MD_INCLUDE_BASE_PATH"""
+    """Class for exercising configuration variable MD_INCLUDE_BASE_PATH."""
 
     def setUp(self, override=None):
-        """Initialize the configurations"""
+        """Initialize the configurations."""
         TestMarkdownInclude.setUp(self, base_path="subdir")
 
     def test_inclusion(self):
-        """Test for MD_INCLUDE_BASE_PATH setting"""
+        """Test for MD_INCLUDE_BASE_PATH setting."""
         TestMarkdownInclude.test_inclusion(self)
 
 
 class TestMarkdownInheritHeadingDepth(TestMarkdownInclude):
-    """Class for exercising configuration variable MD_INCLUDE_INHERIT_HEADING_DEPTH"""
+    """Class for exercising configuration variable MD_INCLUDE_INHERIT_HEADING_DEPTH."""
 
     def setUp(self, override=None):
-        """Initialize the configurations"""
+        """Initialize the configurations."""
         TestMarkdownInclude.setUp(self, inherit_heading_depth=True)
 
     def test_inclusion(self):
-        """Test for MD_INCLUDE_INHERIT_HEADING_DEPTH setting"""
+        """Test for MD_INCLUDE_INHERIT_HEADING_DEPTH setting."""
         TestMarkdownInclude.test_inclusion(self)
 
 
 class TestMarkdownHeadingOffset(TestMarkdownInclude):
-    """Class for exercising configuration variable MD_INCLUDE_HEADING_OFFSET"""
+    """Class for exercising configuration variable MD_INCLUDE_HEADING_OFFSET."""
 
     def setUp(self, override=None):
-        """Initialize the configurations"""
+        """Initialize the configurations."""
         TestMarkdownInclude.setUp(self, heading_offset=1)
 
     def test_inclusion(self):
-        """Test for MD_INCLUDE_HEADING_OFFSET setting"""
+        """Test for MD_INCLUDE_HEADING_OFFSET setting."""
         TestMarkdownInclude.test_inclusion(self)

@@ -1,4 +1,4 @@
-"""Pelican Plugin for using the Markdown include extension"""
+"""Pelican Plugin for using the Markdown include extension."""
 
 # Copyright (C) 2015, 2021, 2022  Rafael Laboissière
 #
@@ -28,7 +28,7 @@ except ImportError:
 
 
 def initialize(pelicanobj):
-    """Initialize the Markdown-Include plugin"""
+    """Initialize the Markdown-Include plugin."""
     pelicanobj.settings.setdefault("MD_INCLUDE_BASE_PATH", None)
     pelicanobj.settings.setdefault("MD_INCLUDE_ENCODING", "utf-8")
     pelicanobj.settings.setdefault("MD_INCLUDE_INHERIT_HEADING_DEPTH", False)
@@ -63,7 +63,7 @@ def initialize(pelicanobj):
 
 
 def register():
-    """Register the Markdown-Include plugin with Pelican"""
+    """Register the Markdown-Include plugin with Pelican."""
     if MarkdownInclude:
         signals.initialized.connect(initialize)
     else:
