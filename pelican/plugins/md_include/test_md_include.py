@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Unit testing suite for the Markdown-Include Plugin."""
 
 # Copyright (C) 2015, 2021, 2022  Rafael Laboissière <rafael@laboissiere.net>
