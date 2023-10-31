@@ -52,7 +52,7 @@ test = [
 ]
 
 [tool.autopub]
-project-name = "Avatar"
+project-name = "Markdown Include"
 git-username = "botpub"
 git-email = "52496925+botpub@users.noreply.github.com"
 append-github-contributor = true
