@@ -69,28 +69,27 @@ class TestMarkdownInclude(unittest.TestCase):
             settings["MD_INCLUDE_HEADING_OFFSET"] = heading_offset
 
         # Create the article file
-        fid = open(
+        with open(
             os.path.join(self.content_path, f"{TEST_FILE_STEM}.md"),
             "w",
-        )
-        fid.write(
-            f"""Title: Test
+        ) as fid:
+            fid.write(
+                f"""Title: Test
 Date: 1970-01-01
 
 {{!{INCLUDE_FILENAME}!}}
 """
-        )
-        fid.close()
+            )
 
         # Create the included file
         if encoding:
             encoded_content = INCLUDED_CONTENT.encode(encoding)
-            fid = open(os.path.join(include_dir, INCLUDE_FILENAME), "wb")
+            mode = "wb"
         else:
             encoded_content = INCLUDED_CONTENT
-            fid = open(os.path.join(include_dir, INCLUDE_FILENAME), "w")
-        fid.write(encoded_content)
-        fid.close()
+            mode = "w"
+        with open(os.path.join(include_dir, INCLUDE_FILENAME), mode) as fid:
+            fid.write(encoded_content)
 
         # Run the Pelican instance
         self.settings = read_settings(override=settings)
@@ -103,13 +102,13 @@ Date: 1970-01-01
 
     def test_inclusion(self):
         """Test for default values."""
-        fid = open(os.path.join(self.output_path, f"{TEST_FILE_STEM}.html"))
-        found = False
-        for line in fid.readlines():
-            if re.search(INCLUDED_CONTENT, line):
-                found = True
-                break
-        assert found
+        with open(os.path.join(self.output_path, f"{TEST_FILE_STEM}.html")) as fid:
+            found = False
+            for line in fid.readlines():
+                if re.search(INCLUDED_CONTENT, line):
+                    found = True
+                    break
+            assert found
 
 
 class TestMarkdownIncludeEncoding(TestMarkdownInclude):
