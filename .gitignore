@@ -1,3 +1,3 @@
 /dist/
-/poetry.lock
+/pdm.lock
 __pycache__
