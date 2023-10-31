@@ -104,10 +104,7 @@ Date: 1970-01-01
 
     def test_inclusion(self):
         """Test for default values"""
-        fid = open(
-            os.path.join(self.output_path, f"{TEST_FILE_STEM}.html"),
-            "r",
-        )
+        fid = open(os.path.join(self.output_path, f"{TEST_FILE_STEM}.html"))
         found = False
         for line in fid.readlines():
             if re.search(INCLUDED_CONTENT, line):
