@@ -1,6 +1,6 @@
 [project]
 name = "pelican-markdown-include"
-version = "1.0.0"
+version = "1.0.1"
 description = "Pelican plugin for using the Markdown-Include extension"
 authors = [{name = "Rafael Laboissière", email = "rafael@laboissiere.net"}]
 license = {text = "AGPL-3.0"}
