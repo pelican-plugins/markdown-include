@@ -3,7 +3,7 @@ Markdown Include: A Plugin for Pelican
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/pelican-plugins/markdown-include/main.yml?branch=main)](https://github.com/pelican-plugins/markdown-include/actions)
 [![PyPI Version](https://img.shields.io/pypi/v/pelican-markdown-include)](https://pypi.org/project/pelican-markdown-include/)
-![License](https://img.shields.io/pypi/l/pelican-markdown-include?color=blue)
+[![License](https://img.shields.io/pypi/l/pelican-markdown-include?color=blue)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 
 This plugin allows the use of the [Markdown-Include extension][] in Pelican articles.
 
