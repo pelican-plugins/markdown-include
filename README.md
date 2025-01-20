@@ -75,7 +75,8 @@ Thanks to [Justin Mayer][] for helping with migration of this plugin under the P
 Author
 ------
 
-Copyright © 2015, 2021-2024 Rafael Laboissière (<rafael@laboissiere.net>)
+Copyright © 2015, 2021-2024, 2025 Rafael Laboissière (<rafael@laboissiere.net>)
+
 
 License
 -------
