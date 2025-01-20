@@ -2,3 +2,4 @@
 /pdm.lock
 /.pdm.toml
 __pycache__
+/.pdm-python
