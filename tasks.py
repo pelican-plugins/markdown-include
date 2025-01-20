@@ -94,8 +94,6 @@ def update(c, check=False):
 
 
 @task
-
-
 def setup(c):
     """Set up the development environment."""
     if which("pdm") or ACTIVE_VENV:
