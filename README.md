@@ -9,14 +9,18 @@ This plugin allows the use of the [Markdown-Include extension][] in Pelican arti
 
 [Markdown-Include extension]: https://github.com/cmacmackin/markdown-include
 
+
 Installation
 ------------
 
 This plugin can be installed via:
 
-    python -m pip install pelican-markdown-include
+```
+python -m pip install pelican-markdown-include
+```
 
 As long as you have not explicitly added a `PLUGINS` setting to your Pelican settings file, then the newly-installed plugin should be automatically detected and enabled. Otherwise, you must add `md_include` to your existing `PLUGINS` list. For more information, please see the [How to Use Plugins](https://docs.getpelican.com/en/latest/plugins.html#how-to-use-plugins) documentation.
+
 
 Usage
 -----
