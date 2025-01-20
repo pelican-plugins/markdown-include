@@ -42,6 +42,7 @@ class TestMarkdownInclude(unittest.TestCase):
         inherit_heading_depth=None,
         heading_offset=None,
     ):
+        """Initialize the configuration."""
         self.output_path = mkdtemp(prefix=TEST_DIR_PREFIX)
         self.content_path = mkdtemp(prefix=TEST_DIR_PREFIX)
 
@@ -97,6 +98,7 @@ Date: 1970-01-01
         pelican.run()
 
     def tearDown(self):
+        """Tidy up the temporary directories."""
         rmtree(self.output_path)
         rmtree(self.content_path)
 
