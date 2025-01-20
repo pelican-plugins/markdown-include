@@ -52,6 +52,7 @@ Pelican allows the use of extra Markdown extensions by declaring them in the `MA
 
 [explained]: https://docs.getpelican.com/en/latest/settings.html
 
+
 Contributing
 ------------
 
@@ -62,12 +63,14 @@ To start contributing to this plugin, review the [Contributing to Pelican][] doc
 [existing issues]: https://github.com/pelican-plugins/markdown-include/issues
 [Contributing to Pelican]: https://docs.getpelican.com/en/latest/contribute.html
 
+
 Acknowledgments
 ---------------
 
 Thanks to [Justin Mayer][] for helping with migration of this plugin under the Pelican Plugins organization.
 
 [Justin Mayer]: https://justinmayer.com
+
 
 Author
 ------
