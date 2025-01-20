@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+1.0.5 - 2025-01-20
+------------------
+
+This is a maintenance release. No user-visible changes have been made. This release implements the new system that keeps alignment with plugin template via Cruft.
+
 1.0.4 - 2024-04-14
 ------------------
 
