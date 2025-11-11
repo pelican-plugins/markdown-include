@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+1.0.6 - 2025-11-11
+------------------
+
+This is a maintenance release. For clarity's sake, the wording in the `README.md` documentation file has been improved.
+
 1.0.5 - 2025-01-20
 ------------------
 
